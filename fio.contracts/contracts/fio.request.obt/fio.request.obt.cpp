@@ -193,7 +193,7 @@ namespace fioio {
                 string payer_account;
                 key_to_account(fioreqctx_iter->payer_key, payer_account);
                 name payer_acct = name(payer_account.c_str());
-                fio_403_assert(account != payer_acct.value, ErrorSignature);
+                fio_403_assert(account == payer_acct.value, ErrorSignature);
 
                 //look for other statuses for this request.
                 auto statusByRequestId = fiorequestStatusTable.get_index<"byfioreqid"_n>();
