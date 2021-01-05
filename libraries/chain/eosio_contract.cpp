@@ -88,6 +88,7 @@ namespace eosio {
                            create.actor == TokenContract ||
                            create.actor == TREASURYACCOUNT ||
                            create.actor == FIOSYSTEMACCOUNT ||
+                           // FIOESCROW
                            create.actor == FIOESCROW ||
                            create.actor == FIOACCOUNT
                         ,fio_invalid_account_or_action,"Invalid Signature" );
@@ -137,6 +138,7 @@ namespace eosio {
                            rem.actor == TokenContract ||
                            rem.actor == TREASURYACCOUNT ||
                            rem.actor == FIOSYSTEMACCOUNT ||
+                           // FIOESCROW
                            rem.actor == FIOESCROW ||
                            rem.actor == FIOACCOUNT
                         ,fio_invalid_account_or_action,"Invalid Signature" );
@@ -245,6 +247,7 @@ namespace eosio {
                                act.account == TokenContract ||
                                act.account == TREASURYACCOUNT ||
                                act.account == FIOSYSTEMACCOUNT ||
+                               // FIOESCROW
                                act.account == FIOESCROW ||
                                act.account == FIOACCOUNT
                     ,fio_invalid_account_or_action,"set code not permitted." );
